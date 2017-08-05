@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace AssassinSteed.Character
+namespace AssassinSteed.Actor
 {
     public abstract class Character : MonoBehaviour
     {

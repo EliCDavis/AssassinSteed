@@ -1,4 +1,4 @@
-namespace AssassinSteed.Character
+namespace AssassinSteed.Actor
 {
     /// <summary>
     /// Anything that can move on the ground should implement this interface

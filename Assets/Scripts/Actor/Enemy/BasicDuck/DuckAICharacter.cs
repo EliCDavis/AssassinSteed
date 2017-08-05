@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace AssassinSteed.Character.Enemy.BasicDuck
+namespace AssassinSteed.Actor.Enemy.BasicDuck
 {
 
     enum DuckState {

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace AssassinSteed.Character.Enemy.BasicDuck
+namespace AssassinSteed.Actor.Enemy.BasicDuck
 {
 
 	/// <summary>

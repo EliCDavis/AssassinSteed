@@ -1,4 +1,4 @@
-namespace AssassinSteed.Character
+namespace AssassinSteed.Actor
 {
     public class AICharacter : Character
     {
