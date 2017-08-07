@@ -8,19 +8,42 @@ namespace AssassinSteed.Level
     /// Meant for keeping up with everything going on in a single level, such
     /// as what enemies are alive and where the player is.
     /// 
+    /// Without any map specified the characters will be built in the current
+    /// scene. 
+    /// 
     /// https://sourcemaking.com/design_patterns/mediator
     /// </summary>
     public class LevelMediator
     {
         
-        private List<Character> characters;
+        Dictionary<string, List<Character>> characters;
 
-        /// <summary>
-        /// Protected to encourage the use of the builder.
-        /// </summary>
-        protected LevelMediator(Character[] characters)
+        public LevelMediator(string name, MapType map, Dictionary<string, List<CharacterMomento>> npcs)
         {
-            this.characters = new List<Character>(characters);
+            // Load map
+            if(map != MapType.None)
+            {
+
+            }
+
+            // Build characters
+            if(npcs != null)
+            {
+                foreach (KeyValuePair<string, List<CharacterMomento>> pair in npcs)
+                {
+                    List<Character> charactersInFaction = 
+                        new List<Character>();
+                    
+                    foreach (CharacterMomento momento in pair.Value)
+                    {
+                        charactersInFaction.Add(
+                            CharacterFactory.CreateCharacter(momento, this)
+                        );
+                    }
+
+                    this.characters.Add(pair.Key, charactersInFaction);
+                }
+            }
         }
 
     }
