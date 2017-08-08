@@ -38,8 +38,8 @@ namespace AssassinSteed
             }
             catch (System.IO.FileNotFoundException)
             {
-                return false;
                 Debug.Log("Unable To Find File: " + fileName);
+                return false;
             }
 
         }

@@ -27,6 +27,7 @@ namespace AssassinSteed.Level
             }
 
             // Build characters
+            characters = new Dictionary<string, List<Character>>();
             if(npcs != null)
             {
                 foreach (KeyValuePair<string, List<CharacterMomento>> pair in npcs)
@@ -36,9 +37,7 @@ namespace AssassinSteed.Level
                     
                     foreach (CharacterMomento momento in pair.Value)
                     {
-                        charactersInFaction.Add(
-                            CharacterFactory.CreateCharacter(momento, this)
-                        );
+                        charactersInFaction.Add(momento.BuildCharacter(this));
                     }
 
                     this.characters.Add(pair.Key, charactersInFaction);

@@ -27,6 +27,7 @@ namespace AssassinSteed.Level
         public LevelMediatorBuilder(string name)
         {
             this.name = name;
+            this.npcs = new Dictionary<string, List<CharacterMomento>>();
         }
 
         /// <summary>
